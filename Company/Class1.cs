@@ -8,5 +8,6 @@ namespace Company
 {
     public class Class1
     {
+
     }
 }
