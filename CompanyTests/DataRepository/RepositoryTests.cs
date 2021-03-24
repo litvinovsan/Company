@@ -28,7 +28,7 @@ namespace CompanyTests.DataRepository
             // Arrange
             var repository = Repository.GetInstance();
             // Action 
-            var actual = repository.Add(new Employee(1, 2, DateTime.Now, EmployeeType.Sales));
+            var actual = repository.Add(new Employee(1,"dummy", 2, DateTime.Now, EmployeeType.Sales));
             // Assert
             Assert.IsTrue(actual);
         }
