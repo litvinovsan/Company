@@ -3,6 +3,31 @@ using Company.DataRepository;
 using Company.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+namespace Company.DataRepository.Tests
+{
+    [TestClass()]
+    public class RepositoryTests
+    {
+        [TestMethod()]
+        public void GetAllTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetTest1()
+        {
+            Assert.Fail();
+        }
+    }
+}
+
 namespace CompanyTests.DataRepository
 {
     [TestClass()]

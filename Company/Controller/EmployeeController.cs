@@ -10,14 +10,11 @@ namespace Company.Controller
 {
     public class EmployeeController
     {
-        private IRepository Repository { get; }
-
-        public EmployeeController(IRepository repository)
+        public static Employee Create(Creator typeCreator)
         {
-            Repository = repository ?? throw new ArgumentNullException(nameof(repository));
-
+            return (Employee)typeCreator.FactoryMethod();
         }
-
+      
         /// <summary>
         /// Get all sub employees for id
         /// </summary>
@@ -25,7 +22,7 @@ namespace Company.Controller
         /// <returns></returns>
         public IList<IEmployee> GetSubEmployees(int id)
         {
-            var result = Repository.GetAll().Where(empl => empl.BossId == id).Select(x => x).ToList();
+            var result = Repository.GetInstance().GetAll().Where(empl => empl.BossId == id).Select(x => x).ToList();
             return result;
         }
 

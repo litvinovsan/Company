@@ -9,17 +9,17 @@ namespace Company.Model
     public class Employee : IEmployee
     {
         public int Id { get; }
-        public int BossId { get; set; }
+        public int? BossId { get; set; }
         public string Name { get; set; }
-        public DateTime BeginDate { get; }
+        public DateTime BeginWorkDate { get; }
         public EmployeeType Type { get; set; }
 
-        public Employee(int id, string name, int bossId, DateTime dateStart, EmployeeType type)
+        public Employee(int id, string name, int? bossId, DateTime dateStart, EmployeeType type)
         {
             Id = id;
             Name = name;
             BossId = bossId;
-            BeginDate = dateStart;
+            BeginWorkDate = dateStart;
             Type = type;
         }
     }

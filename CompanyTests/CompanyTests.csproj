@@ -56,6 +56,8 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Controller\CreateSalesTests.cs" />
+    <Compile Include="Controller\EmployeeControllerTests.cs" />
     <Compile Include="DataRepository\RepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

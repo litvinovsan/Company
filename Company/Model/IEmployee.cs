@@ -5,9 +5,9 @@ namespace Company.Model
     public interface IEmployee
     {
         int Id { get;  }
-        int BossId { get; set; }
+        int? BossId { get; set; }
         string Name { get; set; }
-        DateTime BeginDate { get; }
+        DateTime BeginWorkDate { get; }
         EmployeeType Type { get; set; }
     }
 }
