@@ -6,14 +6,14 @@ namespace Company.Controller
     /// <summary>
     /// Basic class for creating a persons
     /// </summary>
-    public abstract class Creator
+    public abstract class EmplAbstract
     {
         private static int _idCounter;
         protected string Name { get; set; }
         protected int? BossId { get; set; }
         protected DateTime DateStart { get; set; }
 
-        protected Creator(string name, int? bossId, DateTime dateStart)
+        protected EmplAbstract(string name, int? bossId, DateTime dateStart)
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));
             BossId = bossId;
@@ -28,7 +28,7 @@ namespace Company.Controller
     }
 
     // Concrete Employee, overrides a Factory method to create a different types of employees.
-    public class CreateSales : Creator
+    public class CreateSales : EmplAbstract
     {
         public override IEmployee FactoryMethod()
         {
@@ -39,18 +39,18 @@ namespace Company.Controller
         {
         }
     }
-    public class CreateEmployee : Creator
+    public class CreateEmpl : EmplAbstract
     {
         public override IEmployee FactoryMethod()
         {
             return new Employee(IdCounter, Name, BossId, DateStart, EmployeeType.Employee);
         }
 
-        public CreateEmployee(string name, int? bossId, DateTime dateStart) : base(name, bossId, dateStart)
+        public CreateEmpl(string name, int? bossId, DateTime dateStart) : base(name, bossId, dateStart)
         {
         }
     }
-    public class CreateManager : Creator
+    public class CreateManager : EmplAbstract
     {
         public override IEmployee FactoryMethod()
         {

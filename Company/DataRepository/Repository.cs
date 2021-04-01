@@ -10,7 +10,7 @@ namespace Company.DataRepository
         private IList<IEmployee> Employees { get; }
 
         private static Repository _repository;
-
+        private static object _locker=new object();
         private Repository()
         {
             Employees = new List<IEmployee>();
@@ -18,7 +18,15 @@ namespace Company.DataRepository
 
         public static Repository GetInstance() // Singleton
         {
-            return _repository ?? (_repository = new Repository());
+            if (_repository != null)
+                return _repository;
+            else
+            {
+                lock (_locker)
+                {
+                    return _repository = new Repository(); 
+                }
+            }
         }
 
         /// <summary>

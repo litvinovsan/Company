@@ -48,9 +48,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataRepository\IRepository.cs" />
     <Compile Include="DataRepository\Repository.cs" />
+    <Compile Include="Salary\SalaryStrategy.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Salary\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
