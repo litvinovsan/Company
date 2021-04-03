@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Company.Controller;
 using Company.DataRepository;
 using Company.Model;
 
-namespace Company.Controller
+namespace Company.EmployeeController
 {
     public class EmployeeController
     {

@@ -41,14 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\EmployeeController.cs" />
-    <Compile Include="Controller\EmployeeFactory.cs" />
+    <Compile Include="EmployeeController\EmployeeController.cs" />
+    <Compile Include="EmployeeController\EmployeeFactory.cs" />
     <Compile Include="Model\Employee.cs" />
     <Compile Include="Model\IEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataRepository\IRepository.cs" />
     <Compile Include="DataRepository\Repository.cs" />
-    <Compile Include="Salary\SalaryStrategy.cs" />
+    <Compile Include="SalaryController\Salary.cs" />
+    <Compile Include="SalaryController\SalaryStrategy.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

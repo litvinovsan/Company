@@ -1,5 +1,6 @@
 ﻿using System;
 using Company.Model;
+using Company.SalaryController;
 
 namespace Company.Controller
 {

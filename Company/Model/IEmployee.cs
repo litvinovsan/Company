@@ -1,4 +1,5 @@
 ﻿using System;
+using Company.SalaryController;
 
 namespace Company.Model
 {
